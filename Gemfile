@@ -34,7 +34,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
 # Weather Icons, yay!
-gem 'font-awesome-sass'
+gem 'weather-icons-rails'
 
 # Managing environment variables with dotenv
 gem 'dotenv-rails', :groups => [:development]

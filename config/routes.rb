@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root 'weather_screen#index'
   
+  get 'json_test' => 'weather_screen#json_test'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

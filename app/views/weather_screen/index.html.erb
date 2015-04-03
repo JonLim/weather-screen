@@ -3,8 +3,20 @@
   <div class="row">
     
     <div id="main-content" class="col-xs-6 col-xs-offset-3 text-center">
-      <h1><%= @current_time %></h1>
-      <i class="fa fa-sun-o fa-5x"></i>
+      <h1>
+        <%= @current_date %><br />
+        <small><%= @current_time %></small>
+      </h1>
+      
+      <div id="yay-space-top" class="col-xs-12 text-center">
+        <p></p>
+      </div>
+      
+      <p>
+        <i class="wi <%= @client_icon %> wi-5x"></i>
+      </p>
+      
+      <h2><%= @client_temp %></h2>
       <h2>You are currently in <%= Rails.env.development? ? @client_loc : @client_ip.city %>.</h2>
       <h2>It's currently <%= @response['currently']['summary']%> outside.</h2>
     </div>
