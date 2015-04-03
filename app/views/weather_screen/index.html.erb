@@ -1,0 +1,11 @@
+
+<div id="main-container" class="container-fluid">
+  <div class="row">
+    <div id="main-content" class="col-xs-6 col-xs-offset-3 text-center">
+      <h1><%= @current_time %></h1>
+      <i class="fa fa-sun-o fa-5x"></i>
+      <h2>You are currently in <%= Rails.env.development? ? @client_loc : @client_ip.city %>.</h2>
+      <h2>It's currently <%= @response['currently']['summary']%> outside.</h2>
+    </div>
+  </div>
+</div>
