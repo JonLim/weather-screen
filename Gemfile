@@ -36,6 +36,9 @@ gem 'autoprefixer-rails'
 # Weather Icons, yay!
 gem 'font-awesome-sass'
 
+# Managing environment variables with dotenv
+gem 'dotenv-rails', :groups => [:development]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

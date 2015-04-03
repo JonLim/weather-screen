@@ -1,28 +1,50 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! This is the second in my series of small and silly apps made in Rails. This one felt more complicated, but actually ended up being far easier, probably because there was absolutely no database interaction in order to get it up and running. That will change as I make modifications to it.
 
-Things you may want to cover:
+=== SCOPE
 
-* Ruby version
+The Weather Screen is meant to be a very fast and easy way to look at the weather outside - information at a glance while telling you enough to get through the day. Right now it doesn't do that, but in the end, here's what I was trying to accomplish:
 
-* System dependencies
+* Read and parse information from an external API
+* Geolocate the visitor automatically to feed weather readings
+* Set environment variables (config vars)
+* Make the views mobile friendly
 
-* Configuration
+So a relatively small scope, but hey, it's immediately useful for me, so I'm satisfied!
 
-* Database creation
+=== STILL TO DO
 
-* Database initialization
+On the to do list:
 
-* How to run the test suite
+* Implement proper weather icons, along with logic to display the correct one according to `icon` data from the Dark Sky API
+* Provide more visually appealing elements, rather than black on white
+* Implement display of current temperature (maybe with Celcius if in Canada, Fahrenheit if in US?)
 
-* Services (job queues, cache servers, search engines, etc.)
+Will be adding these shortly.
 
-* Deployment instructions
+=== Dependencies
 
-* ...
+Added the following gems:
 
+* Geocoder
+* HTTParty
+* Bootstrap
+* Weather Icons
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Also uses PostgreSQL, but doesn't actually utilize it. Made it a habit for the sake of deploying on Heroku, but can probably remove it.
+
+=== DEPLOY INSTRUCTIONS
+
+As usual.
+
+    bundle install
+    rails server
+    
+Even easier than normal. ;)
+
+=== DEMO
+
+You can find a working demo here: https://warm-woodland-3864.herokuapp.com/
+
+More functionality coming soon!

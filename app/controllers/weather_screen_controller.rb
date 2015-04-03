@@ -17,7 +17,7 @@ class WeatherScreenController < ApplicationController
   
   def get_weather_in_location(latitude, longitude)
     call = 'forecast'
-    api_key = ENV['WEATHER-SCREEN_DARK_SKY_API']
+    api_key = ENV['WEATHER_SCREEN_DARK_SKY_API']
     url = HTTParty.get("https://api.forecast.io/#{call}/#{api_key}/#{latitude},#{longitude}", :headers => { 'ContentType' => 'application/json' })
     response = JSON.parse(url.body)
   end
