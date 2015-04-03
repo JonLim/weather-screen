@@ -18,7 +18,7 @@
       
       <h2><%= @client_temp %></h2>
       <h2>You are currently in <%= Rails.env.development? ? @client_loc : @client_loc.city %>.</h2>
-      <h2>It's currently <%= @response['currently']['summary']%> outside.</h2>
+      <h2>It's currently <%= @client_summary %> outside.</h2>
     </div>
     
     <div id="yay-space" class="col-xs-12 text-center">
