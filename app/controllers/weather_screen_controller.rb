@@ -15,6 +15,7 @@ class WeatherScreenController < ApplicationController
       end
       
       @client_icon = get_weather_icon(@response)
+      @client_summary = get_weather_summary(@response)
       @current_date = get_date(@response)
       @current_time = get_time(@response)
     else
@@ -51,7 +52,7 @@ class WeatherScreenController < ApplicationController
   end
   
   def get_temperature(response)
-    temperature = response['currently']['temperature']
+    response['currently']['temperature']
   end
   
   def get_weather_icon(response)
@@ -82,7 +83,7 @@ class WeatherScreenController < ApplicationController
   end
   
   def get_weather_summary(response)
-    @response['currently']['summary']
+    response['currently']['summary']
   end
   
   def in_celcius(temperature_in_f)
