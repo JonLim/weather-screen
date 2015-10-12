@@ -25,6 +25,9 @@ Will be adding these shortly.
 
 === Dependencies
 
+Ruby 2.2.3
+Rails 4.2.4
+
 Added the following gems:
 
 * Geocoder
